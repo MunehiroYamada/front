@@ -1,13 +1,10 @@
-
-
-const Form = ({setMember,setLocation,setPhone,setTitle}) => {
- 
+const Form = ({ setName, setLocation, setPhone, setTitle }) => {
   return (
     <div>
       <h5>※は必須</h5>
       <label>
         氏名
-        <input type="text" onChange={(e) => setMember(e.target.value)} />※
+        <input type="text" onChange={(e) => setName(e.target.value)} />※
       </label>
       <div>
         <label>
