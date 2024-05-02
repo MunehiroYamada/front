@@ -27,3 +27,6 @@ const Form = ({ setName, setLocation, setPhone, setTitle }) => {
 };
 
 export { Form };
+
+// データベースのxmemberテーブルの名前をmemberに変更しました。
+// データベースのmemberテーブル内のカラムmemberをnameに変更しました。

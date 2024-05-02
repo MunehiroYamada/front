@@ -41,3 +41,6 @@ const registration = () => {
 };
 
 export default registration;
+
+// データベースのxmemberテーブルの名前をmemberに変更しました。
+// データベースのmemberテーブル内のカラムmemberをnameに変更しました。
