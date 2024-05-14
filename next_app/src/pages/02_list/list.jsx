@@ -24,3 +24,5 @@ export async function getServerSideProps() {
   const member = response.data;
   return { props: { member } };
 }
+
+// http://localhost:3000/02_list/list

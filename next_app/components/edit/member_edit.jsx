@@ -28,7 +28,7 @@ export default function MemberEdit({ member, project }) {
     console.log(result.data.affectedRows);
 
     if (result.data.affectedRows) {
-      router.push(`http://localhost:3000/02_list/detail/${members.memberid}`);
+      router.push(`http://localhost:3000/04_detail/${members.memberid}`);
     } else {
       alert("失敗");
     }

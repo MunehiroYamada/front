@@ -125,3 +125,5 @@ const Page2 = () => {
   );
 };
 export default registration;
+
+// http://localhost:3000/03_registration/registration
