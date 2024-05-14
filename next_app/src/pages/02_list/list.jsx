@@ -1,20 +1,26 @@
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import axios from "axios";
 import React from "react";
+import Setting from "../../../components/list/setting_list";
+import MemberList from "../../../components/list/member_list";
+import ModalStart from "../../../components/list/modal/ModalStart";
+import { useState } from "react";
 
-export default function Setting({ query }) {
-  const router = useRouter();
-  const clickHandler1 = () => {
-    router.push("/02_list/registration");
-  };
-  const clickHandler2 = () => {
-    router.push("/");
-  };
+function MyComponent({ member = [] }) {
+  const [memberState, setMemberState] = useState(member);
   return (
     <div>
-      <button onClick={clickHandler1}>新規登録</button>
-      <button onClick={clickHandler2}>検索</button>
+      <Setting />
+      <ModalStart setMemberState={setMemberState} />
+      <div>
+        <MemberList member={memberState} />
+      </div>
     </div>
   );
+}
+export default MyComponent;
+
+export async function getServerSideProps() {
+  const response = await axios.post("http://localhost:4000/all");
+  const member = response.data;
+  return { props: { member } };
 }
