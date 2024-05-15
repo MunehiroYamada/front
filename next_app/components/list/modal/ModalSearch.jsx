@@ -1,8 +1,8 @@
 import axios from "axios";
-
 import ModalForm from "./ModalForm";
 import { useState } from "react";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 
 const Search = ({ setMemberState }) => {
   const [memberid, setMemberid] = useState("");
@@ -16,7 +16,7 @@ const Search = ({ setMemberState }) => {
   const Searching = async () => {
     try {
       const result = await axios.post("http://localhost:4000/search", data);
-      setMemberState(result.data)
+      setMemberState(result.data);
     } catch (error) {
       console.error("failed:", error.message);
     }
@@ -24,8 +24,16 @@ const Search = ({ setMemberState }) => {
 
   return (
     <div>
-      <ModalForm setMemberid={setMemberid} setName={setName} />
-      <Button variant="contained" button onClick={Searching}>検索する</Button>
+      <Grid container spacing={2} justifyContent="center">
+        <Grid item>
+          <ModalForm setMemberid={setMemberid} setName={setName} />
+        </Grid>
+        <Grid item>
+          <Button variant="contained" button onClick={Searching}>
+            検索する
+          </Button>
+        </Grid>
+      </Grid>
     </div>
   );
 };

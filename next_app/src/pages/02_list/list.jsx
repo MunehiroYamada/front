@@ -4,16 +4,26 @@ import Setting from "../../../components/list/setting_list";
 import MemberList from "../../../components/list/member_list";
 import ModalStart from "../../../components/list/modal/ModalStart";
 import { useState } from "react";
+import Grid from "@mui/material/Grid";
 
 function MyComponent({ member = [] }) {
   const [memberState, setMemberState] = useState(member);
   return (
     <div>
-      <Setting />
-      <ModalStart setMemberState={setMemberState} />
-      <div>
-        <MemberList member={memberState} />
-      </div>
+      <Grid container direction="column" spacing={2}>
+        <Grid container spacing={2} item>
+          <Grid item>
+            <Setting />
+          </Grid>
+
+          <Grid item>
+            <ModalStart setMemberState={setMemberState} />
+          </Grid>
+        </Grid>
+        <Grid item xs={12} md={12}>
+          <MemberList member={memberState} />
+        </Grid>
+      </Grid>
     </div>
   );
 }

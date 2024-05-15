@@ -3,6 +3,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
+import Grid from "@mui/material/Grid";
 
 const style = {
   position: "absolute",
@@ -37,15 +38,40 @@ const ModalStart = ({ setMemberState }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-          <ModalContent setMemberState={setMemberState} />
-          <Button variant="contained" type="button" onClick={handleClose}>
-            閉じる
-          </Button>
+        <Box sx={style} md={style}>
+          <Grid container spacing={2} justifyContent="center">
+          <Grid item>
+            <ModalContent setMemberState={setMemberState} />
+            </Grid>
+            <Grid item>
+              <Button variant="contained" type="button" onClick={handleClose}>
+                閉じる
+              </Button>
+            </Grid>
+          </Grid>
         </Box>
       </Modal>
     </div>
   );
 };
+
+{
+  /* <Box sx={style}>
+<Grid container spacing={2}>
+  <Grid item>
+    <ModalContent setMemberState={setMemberState} />
+  </Grid>
+  <Grid item>
+    <Button variant="contained" type="button" onClick={handleClose}>
+      閉じる
+    </Button>
+  </Grid>
+</Grid>
+</Box>
+</Modal>
+</div>
+);
+}; */
+}
 
 export default ModalStart;

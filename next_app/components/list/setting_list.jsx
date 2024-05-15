@@ -5,7 +5,7 @@ import React from "react";
 export default function Setting() {
   const router = useRouter();
   const clickHandler1 = () => {
-    router.push("/02_list/registration");
+    router.push("/03_registration/registration");
   };
 
   return (
