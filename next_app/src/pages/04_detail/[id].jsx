@@ -2,12 +2,19 @@ import axios from "axios";
 import React from "react";
 import SettingDetail from "../../../components/detail/setting_detail";
 import MemberDetail from "../../../components/detail/member_detail";
+import Grid from "@mui/material/Grid";
 
 function MyComponent({ member, memberid }) {
   return (
     <>
-      <MemberDetail member={member} />
-      <SettingDetail memberid={memberid} />
+      <Grid container justifyContent="center" direction="column" spacing={2}>
+        <Grid item>
+          <MemberDetail member={member} />
+        </Grid>
+        <Grid item>
+          <SettingDetail memberid={memberid} />
+        </Grid>
+      </Grid>
     </>
   );
 }

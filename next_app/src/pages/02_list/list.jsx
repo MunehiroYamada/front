@@ -15,7 +15,6 @@ function MyComponent({ member = [] }) {
           <Grid item>
             <Setting />
           </Grid>
-
           <Grid item>
             <ModalStart setMemberState={setMemberState} />
           </Grid>

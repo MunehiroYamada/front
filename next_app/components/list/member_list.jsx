@@ -11,35 +11,35 @@ import Link from "next/link";
 export default function MemberList({ member }) {
   return (
     <TableContainer component={Paper}>
-      <Table xs={12} aria-label="simple table">
+      <Table xs={12} md={12} aria-label="simple table">
         <TableHead>
-          <TableBody>
-            <TableRow>
-              <TableCell>社員番号</TableCell>
-              <TableCell align="right">氏名</TableCell>
-              <TableCell align="right">住所</TableCell>
-              <TableCell align="right">連絡先</TableCell>
-              <TableCell align="right">役職</TableCell>
-              <TableCell align="right">担当プロジェクト</TableCell>
-            </TableRow>
-            {member.map((value, index) => (
-              <TableRow key={index}>
-                <TableCell component="th" scope="row" align="right">
-                  <Link
-                    href={`http://localhost:3000/04_detail/${value.memberid}`}
-                  >
-                    {value.memberid}
-                  </Link>
-                </TableCell>
-                <TableCell align="right">{value.name}</TableCell>
-                <TableCell align="right">{value.location}</TableCell>
-                <TableCell align="right">{value.phone}</TableCell>
-                <TableCell align="right">{value.title}</TableCell>
-                <TableCell align="right">{value.project}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
+          <TableRow>
+            <TableCell align="right">社員番号</TableCell>
+            <TableCell align="right">氏名</TableCell>
+            <TableCell align="right">住所</TableCell>
+            <TableCell align="right">連絡先</TableCell>
+            <TableCell align="right">役職</TableCell>
+            <TableCell align="right">担当プロジェクト</TableCell>
+          </TableRow>
         </TableHead>
+        <TableBody>
+          {member.map((value, index) => (
+            <TableRow key={index}>
+              <TableCell component="th" scope="row" align="right">
+                <Link
+                  href={`http://localhost:3000/04_detail/${value.memberid}`}
+                >
+                  {value.memberid}
+                </Link>
+              </TableCell>
+              <TableCell align="right">{value.name}</TableCell>
+              <TableCell align="right">{value.location}</TableCell>
+              <TableCell align="right">{value.phone}</TableCell>
+              <TableCell align="right">{value.title}</TableCell>
+              <TableCell align="right">{value.project}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
       </Table>
     </TableContainer>
   );

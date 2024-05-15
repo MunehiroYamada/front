@@ -31,7 +31,6 @@ const ModalStart = ({ setMemberState }) => {
       >
         検索
       </Button>
-
       <Modal
         open={open}
         onClose={handleClose}
@@ -40,8 +39,8 @@ const ModalStart = ({ setMemberState }) => {
       >
         <Box sx={style} md={style}>
           <Grid container spacing={2} justifyContent="center">
-          <Grid item>
-            <ModalContent setMemberState={setMemberState} />
+            <Grid item>
+              <ModalContent setMemberState={setMemberState} />
             </Grid>
             <Grid item>
               <Button variant="contained" type="button" onClick={handleClose}>
@@ -54,24 +53,5 @@ const ModalStart = ({ setMemberState }) => {
     </div>
   );
 };
-
-{
-  /* <Box sx={style}>
-<Grid container spacing={2}>
-  <Grid item>
-    <ModalContent setMemberState={setMemberState} />
-  </Grid>
-  <Grid item>
-    <Button variant="contained" type="button" onClick={handleClose}>
-      閉じる
-    </Button>
-  </Grid>
-</Grid>
-</Box>
-</Modal>
-</div>
-);
-}; */
-}
 
 export default ModalStart;

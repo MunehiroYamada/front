@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 const ModalForm = ({ setMemberid, setName }) => {
   return (
     <div>
-      <Grid container spacing={1} justifyContent="center"> 
+      <Grid container spacing={1} justifyContent="center">
         <Grid item>
           <TextField
             id="outlined-basic"
