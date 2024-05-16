@@ -7,7 +7,8 @@ const ModalForm = ({ setMemberid, setName }) => {
     <div>
       <Grid container spacing={1} justifyContent="center">
         <Grid item>
-          <TextField
+          <TextField InputProps={{
+        style: { background: 'white' }}}
             id="outlined-basic"
             label="社員番号"
             variant="outlined"
@@ -16,7 +17,8 @@ const ModalForm = ({ setMemberid, setName }) => {
           />
         </Grid>
         <Grid item>
-          <TextField
+          <TextField InputProps={{
+        style: { background: 'white' }}}
             id="outlined-basic"
             label="氏名"
             variant="outlined"

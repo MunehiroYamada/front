@@ -1,6 +1,4 @@
 import * as React from "react";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
 import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -10,9 +8,8 @@ export default function MemberDetail({ member }) {
     <Grid item justifyContent="center">
       <Box
         sx={{
-          // width: "500px",
+
           whiteSpace: "pre-wrap",
-          maxWidth: "700px",
           display: "flex",
           alignItems: "center",
           minHeight: "200px",

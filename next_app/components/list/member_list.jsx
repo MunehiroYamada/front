@@ -10,9 +10,9 @@ import Link from "next/link";
 
 export default function MemberList({ member }) {
   return (
-    <TableContainer component={Paper}>
-      <Table xs={12} md={12} aria-label="simple table">
-        <TableHead>
+    <TableContainer component={Paper} >
+      <Table item  aria-label="simple table">
+        <TableHead sx={{bgcolor:"#b2ebf2"}}>
           <TableRow>
             <TableCell align="right">社員番号</TableCell>
             <TableCell align="right">氏名</TableCell>
