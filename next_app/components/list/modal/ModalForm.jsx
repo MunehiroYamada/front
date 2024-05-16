@@ -12,7 +12,7 @@ const ModalForm = ({ setMemberid, setName }) => {
             id="outlined-basic"
             label="社員番号"
             variant="outlined"
-            type="text"
+            type="number"
             onChange={(e) => setMemberid(e.target.value)}
           />
         </Grid>

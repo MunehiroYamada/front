@@ -105,7 +105,7 @@ export default function MemberEdit({ member, project }) {
               id="outlined-basic"
               label="連絡先"
               variant="outlined"
-              type="text"
+              type="number"
               value={members.phone}
               onChange={(e) => handleInputChange("phone", e.target.value)}
               InputProps={{
