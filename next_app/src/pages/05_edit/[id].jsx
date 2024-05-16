@@ -1,6 +1,5 @@
 import axios from "axios";
 import React from "react";
-
 import MemberEdit from "../../../components/edit/member_edit";
 
 function MyComponent({ member, project }) {

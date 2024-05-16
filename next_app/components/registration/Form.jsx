@@ -26,7 +26,6 @@ const Form = ({ setName, setLocation, setPhone }) => {
             id="outlined-basic"
             label="住所"
             variant="outlined"
-            bgcolor="white"
             type="text"
             onChange={(e) => setLocation(e.target.value)}
             InputProps={{

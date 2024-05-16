@@ -16,7 +16,7 @@ const PullTitleEdit = ({ position, setPosition }) => {
 
   return (
     <Box>
-      <FormControl>
+      <FormControl sx={{ minWidth: 240 }}>
         <InputLabel id="demo-simple-select-label">役職</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -26,6 +26,7 @@ const PullTitleEdit = ({ position, setPosition }) => {
           onChange={(e) => {
             setPosition(e.target.value);
           }}
+          sx={{ background: "white" }}
         >
           {OPTIONS.map((obj) => (
             <MenuItem value={obj}>{obj}</MenuItem>

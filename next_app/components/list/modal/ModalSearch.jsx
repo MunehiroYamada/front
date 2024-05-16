@@ -17,6 +17,8 @@ const Search = ({ setMemberState }) => {
     try {
       const result = await axios.post("http://localhost:4000/search", data);
       setMemberState(result.data);
+      console.log(result);
+      (result.data.length==0)?alert("該当する社員は存在しません。"):console.log(result.data)
     } catch (error) {
       console.error("failed:", error.message);
     }
