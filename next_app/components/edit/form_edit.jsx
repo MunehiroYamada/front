@@ -1,4 +1,4 @@
-const Form = ({ setName, setLocation, setPhone, setTitle }) => {
+const FormEdit = ({ setName, setLocation, setPhone, setTitle }) => {
   return (
     <div>
       <h5>※は必須</h5>
@@ -26,4 +26,4 @@ const Form = ({ setName, setLocation, setPhone, setTitle }) => {
   );
 };
 
-export { Form };
+export default FormEdit;
